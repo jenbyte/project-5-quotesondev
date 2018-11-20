@@ -5,3 +5,15 @@
 /* All Archives Page */
 
 /* Submit a Quote Page */
+
+/* Footer Page */
+.site-info {
+  @include flex;
+  flex-wrap: wrap;
+  margin: 4.5rem 0;
+  p {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+  }
+}

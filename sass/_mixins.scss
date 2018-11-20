@@ -5,6 +5,14 @@
   margin-right: auto;
 }
 
+@mixin flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  align-items: center;
+}
+
+// Structure
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;

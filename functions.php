@@ -58,7 +58,7 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
 function qod_scripts() {
 	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
 
-	//  Add font-awesome
+	// Add font-awesome
 	wp_enqueue_style('qod-fontawesome', "https://use.fontawesome.com/releases/v5.5.0/css/all.css");
 	wp_enqueue_script('jquery'); 
 
@@ -66,12 +66,11 @@ function qod_scripts() {
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 
 
-	// TODO add a custom javascript file
+	// Add a custom javascript file
 	wp_enqueue_script( 'qod-custom-js', get_template_directory_uri() . '/build/js/custom.min.js', array('jquery'), '', true );
 
-
-	// TODO try to add a localized script
-   wp_localize_script( 'red_comments', 'red_vars', array(
+	// Add a localized script
+   wp_localize_script( 'qod-custom-js', 'qod_vars', array(
 	   'rest_url' => esc_url_raw( rest_url() ),
 	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
 	   'post_id' => get_the_ID()
