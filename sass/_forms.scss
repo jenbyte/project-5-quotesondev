@@ -39,14 +39,22 @@ input[type='submit'] {
 
 /* Fields */
 
+.quote-submission-wrapper div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1.5rem 0;
+}
+
 input[type='text'],
 input[type='email'],
 input[type='url'],
 input[type='password'],
 input[type='search'],
 textarea {
+  background: transparent;
   color: #666;
-  border: 1px solid #ccc;
+  border: $border;
   border-radius: 3px;
 
   &:focus {

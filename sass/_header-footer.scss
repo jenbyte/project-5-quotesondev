@@ -24,6 +24,9 @@ img.logo {
     border-right: 1px solid #ffffff;
     line-height: 1;
     padding: 0.3rem 1rem;
+    &:first-child {
+      padding-left: 0;
+    }
   }
 }
 
@@ -34,12 +37,17 @@ img.logo {
   p {
     display: flex;
     justify-content: space-between;
-    margin: 0;
-    padding-left: 1rem;
+
+    @include tablet {
+      margin: 0;
+      padding-left: 1rem;
+    }
+
     a {
-      padding-left: 0.25rem;
+      padding-left: 0.3rem;
     }
   }
+
   @include desktop {
     justify-content: flex-end;
   }

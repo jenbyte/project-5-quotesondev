@@ -17,16 +17,16 @@
 
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					
-						<p>Brought to you by 
-							<a href="<?php echo esc_url( 'https://redacademy.com/' ); ?>">RED Academy</a>
-						</p>
+				
+						<p>Brought to you by <?= sprintf( '<a href="%1s">%2s</a>', esc_url( 'https://redacademy.com/' ), 'RED Academy' ); ?></p>
+						
 				
 					</div><!-- .site-info -->
 				</nav><!-- #site-navigation -->
 			</footer><!-- #colophon -->
-		</div><!-- #page -->
+			</div><!-- #page -->
 
 		<?php wp_footer(); ?>
-
+		
 	</body>
 </html>

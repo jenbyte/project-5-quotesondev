@@ -13,9 +13,12 @@ $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="entry-content">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-content -->
+
+		<div class="entry-content">
+			<img src="<?= get_template_directory_uri() . '/images/quote-left-solid.svg'?>" class="quote" />
+				<?php the_excerpt(); ?>
+			<img src="<?= get_template_directory_uri() . '/images/quote-right-solid.svg'?>" class="quote" />
+		</div><!-- .entry-content -->
 
 	<div class="entry-meta">
 		<?php the_title( '<h2 class="entry-title">&mdash; ', '</h2>' ); ?>
