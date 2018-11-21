@@ -239,7 +239,7 @@ th {
   font-family: 'Exo-Med';
   src: url("../../fonts/Exo-Medium.eot");
   src: url("../../fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Medium.woff2") format("woff2"), url("../../fonts/Exo-Medium.woff") format("woff"), url("../../fonts/Exo-Medium.ttf") format("truetype"), url("../../fonts/Exo-Medium.svg#../../fonts/Exo-Medium") format("svg");
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal; }
 
 @font-face {
@@ -310,7 +310,7 @@ big {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 1rem; }
+  font-size: 16px; }
 
 *,
 *:before,
@@ -380,8 +380,25 @@ input[type='submit'] {
   border: 2px solid #00cc00;
   border-radius: 3px;
   color: #00cc00;
+  font-family: "Exo-Med";
+  font-size: 1rem;
   line-height: 1;
   padding: 0.75rem 2.25rem; }
+  @media (min-width: 620px) {
+    button,
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
+      font-size: 1.25rem; } }
+  @media (min-width: 1080px) {
+    button,
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0 auto; } }
   button:hover,
   input[type='button']:hover,
   input[type='reset']:hover,
@@ -450,7 +467,6 @@ a {
   float: left;
   width: 100%; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -593,6 +609,7 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
+/* Quotations */
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -610,12 +627,33 @@ iframe,
 object {
   max-width: 100%; }
 
-/*--------------------------------------------------------------
-# Page Templates
---------------------------------------------------------------*/
-/* All Archives Page */
-/* Submit a Quote Page */
+/* Header section */
+img.logo {
+  width: 300px; }
+  @media (min-width: 620px) {
+    img.logo {
+      width: 500px; } }
+  @media (min-width: 1080px) {
+    img.logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 0 auto;
+      width: 700px; } }
+
 /* Footer Page */
+.site-footer {
+  margin: 1rem 0; }
+  .site-footer a {
+    font-size: 1rem; }
+  .site-footer li {
+    border-right: 1px solid #ffffff;
+    line-height: 1;
+    padding: 0.3rem 1rem; }
+
 .site-info {
   display: -ms-flexbox;
   display: -webkit-box;
@@ -633,4 +671,60 @@ object {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin: 0;
     padding-left: 1rem; }
+    .site-info p a {
+      padding-left: 0.25rem; }
+  @media (min-width: 1080px) {
+    .site-info {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
+
+/*--------------------------------------------------------------
+# Page Templates
+--------------------------------------------------------------*/
+/* All Archives Page */
+/* Main Page */
+.home .container,
+.blog .container {
+  margin: 0 auto;
+  padding: 2.5%;
+  max-width: 1080px;
+  width: 100%; }
+
+.home .entry-content p,
+.blog .entry-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem; }
+  @media (min-width: 620px) {
+    .home .entry-content p,
+    .blog .entry-content p {
+      font-size: 1.75rem; } }
+  @media (min-width: 1080px) {
+    .home .entry-content p,
+    .blog .entry-content p {
+      font-size: 2.5rem; } }
+
+.home .entry-meta,
+.blog .entry-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem; }
+
+.home .entry-title,
+.home .source,
+.blog .entry-title,
+.blog .source {
+  font-size: 1.25rem; }
+  .home .entry-title a,
+  .home .source a,
+  .blog .entry-title a,
+  .blog .source a {
+    text-decoration: none; }
+
+/* Submit a Quote Page */

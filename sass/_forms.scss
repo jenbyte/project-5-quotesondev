@@ -12,9 +12,18 @@ input[type='submit'] {
   border: 2px solid #00cc00;
   border-radius: 3px;
   color: $color__link;
+  font-family: $font-med;
+  font-size: 1rem;
   line-height: 1;
   padding: 0.75rem 2.25rem;
 
+  @include tablet {
+    font-size: 1.25rem;
+  }
+  @include desktop {
+    display: flex;
+    margin: 0 auto;
+  }
   &:hover {
     border-color: $color__link-hover;
     color: $color__link-hover;

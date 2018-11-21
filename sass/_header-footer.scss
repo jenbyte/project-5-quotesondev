@@ -1,0 +1,46 @@
+/* Header section */
+img.logo {
+  width: 300px;
+
+  @include tablet {
+    width: 500px;
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 700px;
+  }
+}
+
+/* Footer Page */
+.site-footer {
+  margin: 1rem 0;
+  a {
+    font-size: 1rem;
+  }
+  li {
+    border-right: 1px solid #ffffff;
+    line-height: 1;
+    padding: 0.3rem 1rem;
+  }
+}
+
+.site-info {
+  @include flex;
+  flex-wrap: wrap;
+  margin: 4.5rem 0;
+  p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-left: 1rem;
+    a {
+      padding-left: 0.25rem;
+    }
+  }
+  @include desktop {
+    justify-content: flex-end;
+  }
+}

@@ -1,19 +1,41 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-
 /* All Archives Page */
 
-/* Submit a Quote Page */
-
-/* Footer Page */
-.site-info {
-  @include flex;
-  flex-wrap: wrap;
-  margin: 4.5rem 0;
-  p {
+/* Main Page */
+.home,
+.blog {
+  .container {
+    margin: 0 auto;
+    padding: 2.5%;
+    max-width: 1080px;
+    width: 100%;
+  }
+  .entry-content {
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      @include tablet {
+        font-size: 1.75rem;
+      }
+      @include desktop {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .entry-meta {
     display: flex;
-    justify-content: space-between;
-    padding-left: 1rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  .entry-title,
+  .source {
+    font-size: 1.25rem;
+    a {
+      text-decoration: none;
+    }
   }
 }
+
+/* Submit a Quote Page */
