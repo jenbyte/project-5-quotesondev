@@ -16,11 +16,12 @@
       })
         .done(function(data) {
           // append content to DOM e.g. replace the quote content with rest api content
+          $('.entry-content').append();
           console.log(data);
         })
         .fail(function(err) {
           // Append an error message or alert
-          console.log(err);
+          // console.log(err);
         });
     }
   });

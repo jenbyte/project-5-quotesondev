@@ -319,6 +319,9 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
+a {
+  text-decoration: none; }
+
 body {
   background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
@@ -351,6 +354,9 @@ li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5rem; }
+
+li {
+  list-style: none; }
 
 dt {
   font-weight: bold; }
@@ -477,7 +483,6 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
   width: 100%; }
   .main-navigation ul {
     list-style: none;
@@ -716,9 +721,7 @@ img.logo {
 @media (min-width: 1080px) {
   .home .entry-content,
   .blog .entry-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
+    margin: auto; } }
 
 .home .entry-content p,
 .blog .entry-content p {
@@ -754,16 +757,43 @@ img.logo {
   .blog .source a {
     text-decoration: none; }
 
-.home img.quote,
-.blog img.quote {
-  display: none; }
-  @media (min-width: 1080px) {
-    .home img.quote,
-    .blog img.quote {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      color: #00cc00;
-      width: 125px; } }
+.home .quote-left,
+.blog .quote-left {
+  background: url(../../images/quote-left-solid.svg);
+  color: #00cc00;
+  height: 100px;
+  width: auto;
+  overflow: hidden;
+  z-index: 2; }
+
+@media (min-width: 1080px) {
+  .home .content-area,
+  .blog .content-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
+
+@media (min-width: 1080px) {
+  .home .site-main,
+  .blog .site-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 1rem; } }
+
+/* Submit About Page */
+.page input[type='text'],
+.page input[type='url'] {
+  width: 75%; }
 
 /* Submit a Quote Page */

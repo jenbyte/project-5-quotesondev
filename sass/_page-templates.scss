@@ -8,7 +8,7 @@
 .blog {
   .entry-content {
     @include desktop {
-      display: flex;
+      margin: auto;
     }
 
     p {
@@ -35,14 +35,25 @@
     }
   }
 
-  img.quote {
-    display: none;
-    @include desktop {
-      display: flex;
-      color: $color__link;
-      width: 125px;
-    }
+  .quote-left {
+    background: url(../../images/quote-left-solid.svg);
+    color: $color__link;
+    height: 100px;
+    width: auto;
+    overflow: hidden;
+    z-index: 2;
   }
+
+  //   img.quote {
+  //     display: none;
+  //     @include desktop {
+  //       display: flex;
+  //       color: $color__link;
+  //       padding-top: 2rem;
+  //       width: 125px;
+  //     }
+  //   }
+
   // .blog,
   // .home {
   //   .site-content {
@@ -62,6 +73,31 @@
   //     }
   //   }
   // }
+  .content-area {
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+  .site-main {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+    }
+  }
+}
+
+/* Submit About Page */
+.page {
+  input[type='text'],
+  input[type='url'] {
+    width: 75%;
+  }
+  .site-info {
+    // margin-top: 0;
+  }
 }
 
 /* Submit a Quote Page */
