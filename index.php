@@ -9,8 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		
-		<div class="quote-left"></div>
-		<!-- <img src="<?= get_template_directory_uri() . '/images/quote-left-solid.svg'?>" class="quote" /> -->
+	<i class="fas fa-quote-left"></i>
 		
 			<main id="main" class="site-main" role="main">						
 				<?php
@@ -31,9 +30,8 @@ get_header(); ?>
 				
 				?>			
 			</main><!-- #main -->
-
-		<!-- <img src="<?= get_template_directory_uri() . '/images/quote-right-solid.svg'?>" class="quote" /> -->
-		<div class="quote-right"></div>
+			
+	<i class="fas fa-quote-right"></i>
 	
 	</div><!-- #primary -->
 

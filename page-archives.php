@@ -8,6 +8,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+        
+        <i class="fas fa-quote-left"></i>
+
 		<main id="main" class="site-main" role="main">
 
 			<section class="browse-archives">
@@ -52,7 +55,8 @@ get_header(); ?>
 
             </section>
 
-		</main><!-- #main -->
+        </main><!-- #main -->
+        <i class="fas fa-quote-right"></i>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

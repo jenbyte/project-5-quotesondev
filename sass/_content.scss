@@ -1,12 +1,39 @@
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* Structure */
 .container {
   margin: 0 auto;
   padding: 2.5%;
   max-width: 1080px;
   width: 100%;
 }
+
+.hentry,
+.browse-archives,
+.quote-submission {
+  @include desktop {
+    // margin: auto;
+    width: 650px;
+  }
+}
+.content-area {
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+.site-main {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}
+
 /* Posts and pages */
 
 .sticky {
@@ -37,28 +64,15 @@
   margin: 0 0 $base__space-unit;
 }
 
-/* Quotations */
-
-img.quote {
-  color: $color__link;
-  width: 125px;
+/* Quotes */
+i,
+.fas,
+.fa-quote-left {
+  display: none;
+  @include desktop {
+    display: block;
+    color: $color__link;
+    padding-top: 2rem;
+    font-size: 125px;
+  }
 }
-// .blog,
-// .home {
-//   .site-content {
-//     @include desktop {
-//       &:before {
-//         color: $color__link;
-//         content: '/f10d';
-//         font-family: FontAwesome;
-//         font-size: 125px;
-//       }
-//       &:after {
-//         color: $color__link;
-//         content: '/f10e';
-//         font-family: FontAwesome;
-//         font-size: 125px;
-//       }
-//     }
-//   }
-// }

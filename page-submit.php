@@ -8,6 +8,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+
+    <i class="fas fa-quote-left"></i>
+
 		<main id="main" class="site-main" role="main">
 
             <section class="quote-submission">
@@ -33,7 +36,7 @@ get_header(); ?>
                                 <input type="text" name="qutoe_source" id="quote-source">
                             </div>
                             <div>
-                                <label for="quote-source-url">Provide the URL of the quote source, if avaiable.</label>
+                                <label for="quote-source-url">Provide the URL of the quote source, if available.</label>
                                 <input type="url" name="quote_source_url" id="quote-source-url">
                             </div>
 
@@ -50,7 +53,10 @@ get_header(); ?>
             </section>
             
 
-		</main><!-- #main -->
+        </main><!-- #main -->
+        
+        <i class="fas fa-quote-right"></i>
+
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -3,6 +3,7 @@ img.logo {
   width: 300px;
 
   @include tablet {
+    padding: 2rem 0;
     width: 500px;
   }
 
@@ -10,6 +11,7 @@ img.logo {
     display: flex;
     align-items: center;
     margin: 0 auto;
+
     width: 700px;
   }
 }
@@ -27,13 +29,28 @@ img.logo {
     &:first-child {
       padding-left: 0;
     }
+    &:last-child {
+      border-right: none;
+      @include tablet {
+        border-right: 1px solid #ffffff;
+      }
+    }
   }
 }
 
 .site-info {
   @include flex;
   flex-wrap: wrap;
-  margin: 4.5rem 0;
+  margin: 4rem 0 3rem;
+
+  @include tablet {
+    margin: 4.5rem 0 3rem;
+  }
+
+  @include desktop {
+    justify-content: flex-end;
+  }
+
   p {
     display: flex;
     justify-content: space-between;
@@ -46,9 +63,5 @@ img.logo {
     a {
       padding-left: 0.3rem;
     }
-  }
-
-  @include desktop {
-    justify-content: flex-end;
   }
 }
