@@ -409,7 +409,6 @@ input[type='submit'] {
   input[type='reset']:focus,
   input[type='submit']:active,
   input[type='submit']:focus {
-    border-color: #aaa #bbb #bbb;
     -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
             box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
@@ -433,7 +432,7 @@ input[type='password'],
 input[type='search'],
 textarea {
   background: transparent;
-  color: #666;
+  color: #fff;
   border: 2px solid #00cc00;
   border-radius: 3px;
   padding: 0.25rem 0.5rem; }
@@ -443,7 +442,7 @@ textarea {
   input[type='password']:focus,
   input[type='search']:focus,
   textarea:focus {
-    color: #111; }
+    color: #fff; }
 
 input[type='text'],
 input[type='email'],
@@ -889,6 +888,7 @@ i,
 .not-found fieldset {
   border: none;
   margin-left: 0;
+  max-height: 200px;
   padding-left: 0; }
 
 .error-404 i,
@@ -901,6 +901,7 @@ i,
 
 .error-404 .search-form input[type='search'],
 .not-found .search-form input[type='search'] {
+  color: #fff;
   padding-left: 0.75rem;
   width: 240px; }
   @media (min-width: 620px) {

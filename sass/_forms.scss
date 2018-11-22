@@ -9,7 +9,7 @@ input[type='button'],
 input[type='reset'],
 input[type='submit'] {
   background: transparent;
-  border: 2px solid #00cc00;
+  border: $border;
   border-radius: 3px;
   color: $color__link;
   font-family: $font-med;
@@ -28,7 +28,7 @@ input[type='submit'] {
 
   &:active,
   &:focus {
-    border-color: #aaa #bbb #bbb;
+    // border-color: #aaa #bbb #bbb;
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5),
       inset 0 2px 5px rgba(0, 0, 0, 0.15);
   }
@@ -50,13 +50,13 @@ input[type='password'],
 input[type='search'],
 textarea {
   background: transparent;
-  color: #666;
+  color: #fff;
   border: $border;
   border-radius: 3px;
   padding: 0.25rem 0.5rem;
 
   &:focus {
-    color: #111;
+    color: #fff;
   }
 }
 

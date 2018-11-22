@@ -117,8 +117,10 @@ i,
   fieldset {
     border: none;
     margin-left: 0;
+    max-height: 200px;
     padding-left: 0;
   }
+
   i,
   .fa,
   .fa-search {
@@ -126,6 +128,7 @@ i,
   }
 
   .search-form input[type='search'] {
+    color: $color__text-main;
     padding-left: 0.75rem;
     width: 240px;
     @include tablet {
