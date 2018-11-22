@@ -694,7 +694,7 @@ img.logo {
   width: 300px; }
   @media (min-width: 620px) {
     img.logo {
-      padding: 2rem 0;
+      padding-top: 2rem;
       width: 500px; } }
   @media (min-width: 1080px) {
     img.logo {
@@ -789,51 +789,63 @@ img.logo {
 /*  About Submit Page */
 @media (min-width: 620px) {
   .page .entry-title {
-    margin: 2rem 0;
-    margin-bottom: 3rem; } }
+    margin-top: 3rem; } }
 
 .page input[type='text'],
 .page input[type='url'] {
   width: 75%; }
 
+.type-page p {
+  margin-top: 0; }
+
 /* Main Page */
 @media (min-width: 1080px) {
   .home .entry-content,
-  .blog .entry-content {
+  .blog .entry-content,
+  .single .entry-content {
     margin: auto; } }
 
 .home .entry-content p,
-.blog .entry-content p {
+.blog .entry-content p,
+.single .entry-content p {
   font-size: 1.25rem;
   margin-bottom: 1.5rem; }
   @media (min-width: 620px) {
     .home .entry-content p,
-    .blog .entry-content p {
+    .blog .entry-content p,
+    .single .entry-content p {
       font-size: 1.75rem; } }
   @media (min-width: 1080px) {
     .home .entry-content p,
-    .blog .entry-content p {
+    .blog .entry-content p,
+    .single .entry-content p {
       font-size: 2.5rem; } }
 
 .home .entry-meta,
-.blog .entry-meta {
+.blog .entry-meta,
+.single .entry-meta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 3rem; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .home .entry-title,
 .home .source,
 .blog .entry-title,
-.blog .source {
+.blog .source,
+.single .entry-title,
+.single .source {
   font-size: 1.25rem; }
   .home .entry-title a,
   .home .source a,
   .blog .entry-title a,
-  .blog .source a {
+  .blog .source a,
+  .single .entry-title a,
+  .single .source a {
     text-decoration: none; }
 
 @media (min-width: 1080px) {
@@ -844,7 +856,11 @@ img.logo {
   .blog button,
   .blog input[type='button'],
   .blog input[type='reset'],
-  .blog input[type='submit'] {
+  .blog input[type='submit'],
+  .single button,
+  .single input[type='button'],
+  .single input[type='reset'],
+  .single input[type='submit'] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

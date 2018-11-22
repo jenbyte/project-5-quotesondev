@@ -3,7 +3,7 @@ img.logo {
   width: 300px;
 
   @include tablet {
-    padding: 2rem 0;
+    padding-top: 2rem;
     width: 500px;
   }
 
@@ -11,7 +11,6 @@ img.logo {
     display: flex;
     align-items: center;
     margin: 0 auto;
-
     width: 700px;
   }
 }

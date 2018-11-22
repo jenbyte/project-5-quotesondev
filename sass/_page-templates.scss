@@ -27,8 +27,9 @@
 .page {
   @include tablet {
     .entry-title {
-      margin: 2rem 0;
-      margin-bottom: 3rem;
+      margin-top: 3rem;
+      // margin: 2rem 0;
+      // margin-bottom: 3rem;
     }
   }
 
@@ -38,9 +39,16 @@
   }
 }
 
+.type-page {
+  p {
+    margin-top: 0;
+  }
+}
+
 /* Main Page */
 .home,
-.blog {
+.blog,
+.single {
   .entry-content {
     @include desktop {
       margin: auto;
@@ -60,7 +68,8 @@
   .entry-meta {
     display: flex;
     align-items: center;
-    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    // margin-bottom: 3rem;
   }
   .entry-title,
   .source {
