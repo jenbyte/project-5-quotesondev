@@ -29,15 +29,18 @@
 
           let source = data[0]._qod_quote_source;
           let link = data[0]._qod_quote_source_url;
+          const quote = data[0];
 
           // append content to DOM e.g. replace the quote content with rest api content
           $quote.append(data[0].content.rendered);
-          $author.append('&mdash; ' + data[0].title.rendered);
 
-          $ref.append(`, <a href="${link}">${source}</a>`);
-          console.log(data[0]._qod_quote_source_url);
+          if (quote._qod_quote_source === '') {
+            $author.append('&mdash; ' + data[0].title.rendered);
+          } else {
+            $author.append('&mdash; ' + data[0].title.rendered + '&#44; ');
+            $ref.append(` <a href="${link}">${source}</a>`);
+          }
 
-          const quote = data[0];
           // figure out the post slug
           history.pushState(null, null, qod_vars.home_url + '/' + quote.slug);
         })
@@ -60,14 +63,19 @@
 
     function postQuote() {
       //get values of your form inputs
-      //const quoteTitle = $('#form-id').val();
+      const quoteTitle = $('#quote-author').val();
+      const quoteContent = $('#quote-content').val();
+      const quoteSource = $('#quote-source').val();
+      const quoteURL = $('#quote-source-url').val();
 
       $.ajax({
         method: 'POST',
         url: qod_vars.rest_url + 'wp/v2/posts',
         data: {
-          // title: quoteTitle,
-          // author: quoteAuthor,
+          title: quoteTitle,
+          content: quoteContent,
+          _qod_quote_source: quoteSource,
+          _qod_quote_source_url: quoteURL
         },
         beforeSend: function(xhr) {
           xhr.setRequestHeader('X-WP-Nonce', qod_vars.nonce);
@@ -75,12 +83,13 @@
         }
       })
         .done(function(response) {
-          // console.log(response);
+          console.log('sent!');
+
           // slideUp the form
           // append a success message
         })
         .fail(function() {
-          // console.log('something went wrong');
+          console.log('something went wrong');
           //output message for user saying something went wrong
         });
     } // end of postQuote fx

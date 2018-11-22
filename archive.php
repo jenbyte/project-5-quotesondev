@@ -27,16 +27,18 @@ get_header(); ?>
 				<?php
 					get_template_part( 'template-parts/content' );
 				?>
-
+	
 			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
+
+		<nav>
+			<?php qod_numbered_pagination(); ?>
+		</nav>
 
 		</main><!-- #main -->
 

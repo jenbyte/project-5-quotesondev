@@ -1,0 +1,63 @@
+/*  About */
+.about {
+  .entry-content {
+    margin-top: 0;
+  }
+  .entry-title {
+    margin-bottom: 0rem;
+  }
+  @include tablet {
+    .entry-title {
+      margin-top: 3rem;
+      // margin: 2rem 0;
+      // margin-bottom: 3rem;
+    }
+  }
+  .hentry {
+    margin-bottom: 0;
+  }
+  .site-info {
+    margin: 0;
+  }
+}
+
+/* All Archives Page */
+.post-archives ul,
+.category-archives ul,
+.tag-archives ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-left: 0;
+  li {
+    margin-right: 1.2rem;
+    margin-bottom: 0.5rem;
+    a {
+      @include tablet {
+        font-size: 1.25rem !important;
+      }
+    }
+    @include tablet {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+/* Submit Quote Page */
+
+.quote-submission {
+  label {
+    padding-bottom: 0.75rem;
+  }
+  input[type='text'],
+  input[type='url'] {
+    width: 70%;
+  }
+  input,
+  textarea {
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}

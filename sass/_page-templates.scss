@@ -1,54 +1,44 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* All Archives Page */
-.post-archives ul,
-.category-archives ul,
-.tag-archives ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-left: 0;
-  li {
-    margin-right: 1.2rem;
-    margin-bottom: 0.5rem;
-    a {
-      @include tablet {
-        font-size: 1.25rem !important;
-      }
+/*  Archives/single Page */
+.archive {
+  .hentry {
+    border-bottom: $border-dash;
+  }
+
+  .number-pagination {
+    margin-top: 3rem;
+    a,
+    span {
+      padding: 0 0.25rem;
     }
-    @include tablet {
-      font-size: 1.25rem;
+  }
+  .entry-content {
+    p {
+      margin-top: 1rem;
     }
+  }
+
+  .page-title {
+    border-bottom: $border-dash;
+    // margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .source {
+    font-style: italic;
   }
 }
-
-/*  About Submit Page */
-.page {
-  @include tablet {
-    .entry-title {
-      margin-top: 3rem;
-      // margin: 2rem 0;
-      // margin-bottom: 3rem;
-    }
-  }
-
-  input[type='text'],
-  input[type='url'] {
-    width: 75%;
-  }
-}
-
-.type-page {
-  p {
-    margin-top: 0;
-  }
+.browse-archives {
 }
 
 /* Main Page */
 .home,
 .blog,
-.single {
+.single,
+.archive {
   .entry-content {
     @include desktop {
       margin: auto;
@@ -69,7 +59,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    // margin-bottom: 3rem;
+    margin-bottom: 3rem;
   }
   .entry-title,
   .source {
@@ -78,6 +68,10 @@
       text-decoration: none;
     }
   }
+  .entry-title {
+    margin: 0;
+  }
+
   @include desktop {
     button,
     input[type='button'],
@@ -106,17 +100,6 @@ i,
     &::after {
       display: block;
     }
-  }
-}
-
-/* Submit a Quote Page */
-.quote-submission {
-  label {
-    padding-bottom: 0.75rem;
-  }
-  input,
-  textarea {
-    margin-bottom: 1rem;
   }
 }
 

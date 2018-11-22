@@ -453,7 +453,7 @@ input[type='search'] {
 
 textarea {
   padding-left: 3px;
-  width: 100%; }
+  width: 95%; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -705,6 +705,7 @@ img.logo {
           -ms-flex-align: center;
               align-items: center;
       margin: 0 auto;
+      margin-bottom: 2rem;
       width: 700px; } }
 
 /* Footer Page */
@@ -756,9 +757,23 @@ img.logo {
     .site-info p a {
       padding-left: 0.3rem; }
 
-/*--------------------------------------------------------------
-# Page Templates
---------------------------------------------------------------*/
+/*  About */
+.about .entry-content {
+  margin-top: 0; }
+
+.about .entry-title {
+  margin-bottom: 0rem; }
+
+@media (min-width: 620px) {
+  .about .entry-title {
+    margin-top: 3rem; } }
+
+.about .hentry {
+  margin-bottom: 0; }
+
+.about .site-info {
+  margin: 0; }
+
 /* All Archives Page */
 .post-archives ul,
 .category-archives ul,
@@ -786,44 +801,76 @@ img.logo {
       .tag-archives ul li {
         font-size: 1.25rem; } }
 
-/*  About Submit Page */
-@media (min-width: 620px) {
-  .page .entry-title {
-    margin-top: 3rem; } }
+/* Submit Quote Page */
+.quote-submission label {
+  padding-bottom: 0.75rem; }
 
-.page input[type='text'],
-.page input[type='url'] {
-  width: 75%; }
+.quote-submission input[type='text'],
+.quote-submission input[type='url'] {
+  width: 70%; }
 
-.type-page p {
-  margin-top: 0; }
+.quote-submission input,
+.quote-submission textarea {
+  margin-bottom: 1rem; }
+
+.quote-submission p {
+  margin-bottom: 0; }
+
+/*--------------------------------------------------------------
+# Page Templates
+--------------------------------------------------------------*/
+/*  Archives/single Page */
+.archive .hentry {
+  border-bottom: 1px dashed #ffffff; }
+
+.archive .number-pagination {
+  margin-top: 3rem; }
+  .archive .number-pagination a,
+  .archive .number-pagination span {
+    padding: 0 0.25rem; }
+
+.archive .entry-content p {
+  margin-top: 1rem; }
+
+.archive .page-title {
+  border-bottom: 1px dashed #ffffff;
+  padding-top: 1rem;
+  padding-bottom: 2rem; }
+
+.archive .source {
+  font-style: italic; }
 
 /* Main Page */
 @media (min-width: 1080px) {
   .home .entry-content,
   .blog .entry-content,
-  .single .entry-content {
+  .single .entry-content,
+  .archive .entry-content {
     margin: auto; } }
 
 .home .entry-content p,
 .blog .entry-content p,
-.single .entry-content p {
+.single .entry-content p,
+.archive .entry-content p {
   font-size: 1.25rem;
   margin-bottom: 1.5rem; }
   @media (min-width: 620px) {
     .home .entry-content p,
     .blog .entry-content p,
-    .single .entry-content p {
+    .single .entry-content p,
+    .archive .entry-content p {
       font-size: 1.75rem; } }
   @media (min-width: 1080px) {
     .home .entry-content p,
     .blog .entry-content p,
-    .single .entry-content p {
+    .single .entry-content p,
+    .archive .entry-content p {
       font-size: 2.5rem; } }
 
 .home .entry-meta,
 .blog .entry-meta,
-.single .entry-meta {
+.single .entry-meta,
+.archive .entry-meta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -831,22 +878,33 @@ img.logo {
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-bottom: 3rem; }
 
 .home .entry-title,
 .home .source,
 .blog .entry-title,
 .blog .source,
 .single .entry-title,
-.single .source {
+.single .source,
+.archive .entry-title,
+.archive .source {
   font-size: 1.25rem; }
   .home .entry-title a,
   .home .source a,
   .blog .entry-title a,
   .blog .source a,
   .single .entry-title a,
-  .single .source a {
+  .single .source a,
+  .archive .entry-title a,
+  .archive .source a {
     text-decoration: none; }
+
+.home .entry-title,
+.blog .entry-title,
+.single .entry-title,
+.archive .entry-title {
+  margin: 0; }
 
 @media (min-width: 1080px) {
   .home button,
@@ -860,7 +918,11 @@ img.logo {
   .single button,
   .single input[type='button'],
   .single input[type='reset'],
-  .single input[type='submit'] {
+  .single input[type='submit'],
+  .archive button,
+  .archive input[type='button'],
+  .archive input[type='reset'],
+  .archive input[type='submit'] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -890,14 +952,6 @@ i,
       .fa-quote-left::before,
       .fa-quote-left::after {
         display: block; } }
-
-/* Submit a Quote Page */
-.quote-submission label {
-  padding-bottom: 0.75rem; }
-
-.quote-submission input,
-.quote-submission textarea {
-  margin-bottom: 1rem; }
 
 /* 404 Page */
 .error-404 fieldset,
