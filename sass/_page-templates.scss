@@ -81,9 +81,7 @@
 }
 
 /* Quotes */
-i,
-.fas,
-.fa-quote-left {
+.fas {
   display: none;
   &::before,
   &::after {
@@ -101,6 +99,13 @@ i,
 }
 
 /* 404 Page */
+i,
+.fa,
+.fa-search {
+  display: block;
+  font-size: 20px;
+}
+
 .error-404,
 .not-found {
   fieldset {
@@ -108,13 +113,6 @@ i,
     margin-left: 0;
     max-height: 200px;
     padding-left: 0;
-  }
-
-  i,
-  .fa,
-  .fa-search {
-    display: inline-block;
-    font-size: 20px;
   }
 
   .search-form input[type='search'] {
@@ -133,8 +131,10 @@ i,
 }
 .error404 {
   .site-main {
-    margin: auto;
     padding-left: 0;
     width: 650px;
+    @include desktop {
+      margin: auto;
+    }
   }
 }
