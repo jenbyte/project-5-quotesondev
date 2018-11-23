@@ -27,24 +27,24 @@
           $author.empty();
           $ref.empty();
 
-          let source = data[0]._qod_quote_source;
-          let link = data[0]._qod_quote_source_url;
           const quote = data[0];
+          let source = quote._qod_quote_source;
+          let link = quote._qod_quote_source_url;
 
           // append content to DOM e.g. replace the quote content with rest api content
-          $quote.append(data[0].content.rendered);
+          $quote.append(quote.content.rendered);
 
           if (quote._qod_quote_source === '') {
-            $author.append('&mdash; ' + data[0].title.rendered);
+            $author.append('&mdash; ' + quote.title.rendered);
           } else {
-            $author.append('&mdash; ' + data[0].title.rendered + '&#44; ');
+            $author.append('&mdash; ' + quote.title.rendered + '&#44; ');
             $ref.append(` <a href="${link}">${source}</a>`);
           }
 
           // figure out the post slug
           history.pushState(null, null, qod_vars.home_url + '/' + quote.slug);
         })
-        .fail(function(err) {
+        .fail(function() {
           // Append an error message or alert
           console.log('error');
         });
@@ -55,19 +55,21 @@
       //can use this to reset PONG game
     });
 
-    // submit the form and create a new quote post
+    // Submit new quote
     $('#quote-submission-form').on('submit', function(event) {
       event.preventDefault();
+      $(this).prop('disabled', true);
       postQuote();
-    }); // end of #quote-submission-form
+    });
 
     function postQuote() {
-      //get values of your form inputs
-      const quoteTitle = $('#quote-author').val();
+      let quoteTitle = $('#quote-author').val();
       const quoteContent = $('#quote-content').val();
       const quoteSource = $('#quote-source').val();
       const quoteURL = $('#quote-source-url').val();
-
+      if (quoteTitle == '' && quoteContent != '') {
+        quoteTitle = 'Anonymous';
+      }
       $.ajax({
         method: 'POST',
         url: qod_vars.rest_url + 'wp/v2/posts',
@@ -79,13 +81,11 @@
         },
         beforeSend: function(xhr) {
           xhr.setRequestHeader('X-WP-Nonce', qod_vars.nonce);
-          // 'X-WP-Nounce' is for authentication --> WP will lok
+          // 'X-WP-Nounce' is for authentication --> WP will look for the nonce
         }
       })
-        .done(function(response) {
+        .done(function() {
           console.log('sent!');
-          // slideUp the form
-          // append a success message
           $('.quote-submission-wrapper').slideUp(700);
           $('.quote-submission').append(
             '<p>Thanks, your quote submission was received!</p>'
@@ -93,9 +93,13 @@
         })
         .fail(function() {
           console.log('something went wrong');
-          alert('Please enter required fields.');
-
-          //output message for user saying something went wrong
+          $('html, body').animate({ scrollTop: 0 }, '');
+          if (quoteContent === '') {
+            $('#quote-author').focus();
+            $('.entry-title').append(
+              '<p class="fail-msg"><span>*</span> Please enter the fields to submit a quote.</p>'
+            );
+          }
         });
     } // end of postQuote fx
   }); // end of doc ready

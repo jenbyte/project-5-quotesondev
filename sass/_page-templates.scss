@@ -7,6 +7,13 @@
     border-bottom: $border-dash;
   }
 
+  .number-pagination {
+    margin-top: 3rem;
+    a,
+    span {
+      padding: 0 0.25rem;
+    }
+  }
   .entry-content {
     p {
       margin-top: 1rem;
@@ -75,7 +82,9 @@
 }
 
 /* Quotes */
-.fas {
+i,
+.fas,
+.fa-quote-left {
   display: none;
   &::before,
   &::after {
@@ -92,58 +101,39 @@
   }
 }
 
-/* Search Page */
-.search-results {
-  .page-title {
-    border-bottom: $border-dash;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    @include desktop {
-      padding: 1.5rem 0;
-    }
-  }
-  p {
-    margin-bottom: 0;
-  }
-}
-
 /* 404 Page */
 .error-404,
 .not-found {
-  @include desktop {
-    width: 650px;
-  }
   fieldset {
     border: none;
     margin-left: 0;
+    max-height: 200px;
     padding-left: 0;
   }
 
   i,
   .fa,
   .fa-search {
-    display: block;
     font-size: 20px;
-  }
-
-  .page-title {
-    @include desktop {
-      padding-top: 1.5rem;
-    }
   }
 
   .search-form input[type='search'] {
     color: $color__text-main;
     padding-left: 0.75rem;
-    width: 200px;
+    width: 240px;
     @include tablet {
       font-size: 1.25rem;
-      max-width: 250px;
     }
   }
 
   .search-submit {
     border: none;
     padding: 0 0.7rem;
+  }
+}
+.error404 {
+  .site-main {
+    margin-left: 2rem;
+    padding-left: 0;
   }
 }

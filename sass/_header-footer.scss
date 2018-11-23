@@ -40,12 +40,14 @@ img.logo {
 }
 
 .site-info {
+  width: 500px;
   @include flex;
   flex-wrap: wrap;
   margin: 3rem 0 3rem;
 
   @include tablet {
     margin: 3.5rem 0 3rem;
+    width: 650px;
   }
 
   @include desktop {

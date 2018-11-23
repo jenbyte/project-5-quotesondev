@@ -8,10 +8,9 @@
 // method to retrieving meta data in WP
 $source = get_post_meta( get_the_ID(), '_qod_quote_source', true );
 $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
-	// var_dump($source_url);
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
 
 	<div class="entry-content">

@@ -1,23 +1,31 @@
-# Quotes on Dev Starter
+# Project 5: Quotes on Dev
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+Inhabitent Site is a multi-page website for a Inhabitent Camping Supply Co. Its objective is using WordPress as a content management system.
 
-## Installation
+## **Technologies Used**
 
-### 1. Download me (don't clone me!)
+PHP, jQuery, HTML, CSS/SCSS, gulp, CLI, Wordpress CMS
 
-Then add me to your `wp-content/themes` directory.
+## **Personal Learnings**
 
-### 2. Rename the `quotesondev-starter-master` directory
+- How to create a WordPress theme
+- Understanding the WP Template Hierarchy
+- Using PHP to modify content in WordPress
 
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
+## **Installation**
 
-### 3. Install the dev dependencies
+"Quotes on Dev" site requires [Node.js v4+][1] to run.
 
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
+Install the dependencies and devDependencies and start the server.
 
-### 4. Update the proxy in `gulpfile.js`
+```
+$ cd wp-content/themes/inhabitent
+$ npm install -d
+$ gulp
+```
 
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+[1]: https://nodejs.org/en/
 
-And now would be a good time to `git init` :)
+## **License**
+
+Learning materials content is copyright (c) 2018 RED Academy.

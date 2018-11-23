@@ -1,21 +1,5 @@
-/*  General for all Pages */
-.about,
-.browse-archives,
-.quote-submission {
-  @include desktop {
-    .entry-title {
-      padding: 1rem 0;
-    }
-  }
-}
-.number-pagination {
-  margin-top: 3rem;
-  a,
-  span {
-    padding: 0 0.25rem;
-  }
-}
 /*  About */
+
 .about {
   .entry-content {
     margin-top: 0;
@@ -23,22 +7,13 @@
   .entry-title {
     margin-bottom: 0rem;
   }
-  @include tablet {
-    .entry-title {
-      margin-top: 3rem;
-      // margin: 2rem 0;
-      // margin-bottom: 3rem;
-    }
-  }
   .hentry {
     margin-bottom: 0;
-  }
-  .site-info {
-    // margin: 0;
   }
 }
 
 /* All Archives Page */
+
 .post-archives ul,
 .category-archives ul,
 .tag-archives ul {
@@ -63,9 +38,6 @@
 /* Submit Quote Page */
 
 .quote-submission {
-  label {
-    // padding-bottom: 0.75rem;
-  }
   input[type='text'],
   input[type='url'] {
     width: 70%;
@@ -78,6 +50,15 @@
   }
   p {
     margin-bottom: 0;
+  }
+
+  .fail-msg {
+    color: yellow;
+    font-family: $font-italic;
+    font-size: 0.9rem;
+  }
+  span {
+    color: red;
   }
 }
 .quote-submission-wrapper {
@@ -92,8 +73,23 @@
     margin: 0.7rem 0;
   }
 }
-// .quote-submission-form {
-//   div {
-//     margin-bottom: 0.25rem;
-//   }
-// }
+
+/*  General for all Pages */
+
+.about,
+.browse-archives,
+.quote-submission {
+  @include desktop {
+    .entry-title {
+      padding: 1rem 0;
+    }
+  }
+}
+
+.number-pagination {
+  margin-top: 3rem;
+  a,
+  span {
+    padding: 0 0.25rem;
+  }
+}

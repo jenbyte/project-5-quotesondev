@@ -29,7 +29,7 @@ get_header(); ?>
                             </div>
                             <div>
                                 <label for="quote-content">Quote</label>
-                                <textarea name="quote_content" id="quote-content" rows="3" cols="20" ></textarea>
+                                <textarea name="quote_content" id="quote-content" rows="3" cols="20" required ></textarea>
                             </div>
                             <div>
                                 <label for="quote-source">Where did you find this quote? (e.g. book name)</label>
@@ -46,8 +46,7 @@ get_header(); ?>
 
                     <?php else: ?>
                         <p>Sorry, you must be logged in to submit a quote!</p>
-                        <p><?php echo sprintf( '<a href="%1s">%2s</a>', esc_url( 'wp_login_url' ), 'Click here to login.' ); ?></p>
-                    <!-- sprintf = string print format; in %1s, 1 is important and is replaced by next parameter. %2s is replaced by 3rd parameter -->
+                        <p><?php echo sprintf( '<a href="%1s">%2s</a>', wp_login_url() , 'Click here to login.' ); ?></p>
                 <?php endif; ?>
 
             </section>

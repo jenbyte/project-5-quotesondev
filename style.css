@@ -715,6 +715,7 @@ img.logo {
           border-right: 1px solid #ffffff; } }
 
 .site-info {
+  width: 500px;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -726,7 +727,8 @@ img.logo {
   margin: 3rem 0 3rem; }
   @media (min-width: 620px) {
     .site-info {
-      margin: 3.5rem 0 3rem; } }
+      margin: 3.5rem 0 3rem;
+      width: 650px; } }
   @media (min-width: 1080px) {
     .site-info {
       -webkit-box-pack: end;
@@ -747,29 +749,12 @@ img.logo {
     .site-info p a {
       padding-left: 0.3rem; }
 
-/*  General for all Pages */
-@media (min-width: 1080px) {
-  .about .entry-title,
-  .browse-archives .entry-title,
-  .quote-submission .entry-title {
-    padding: 1rem 0; } }
-
-.number-pagination {
-  margin-top: 3rem; }
-  .number-pagination a,
-  .number-pagination span {
-    padding: 0 0.25rem; }
-
 /*  About */
 .about .entry-content {
   margin-top: 0; }
 
 .about .entry-title {
   margin-bottom: 0rem; }
-
-@media (min-width: 620px) {
-  .about .entry-title {
-    margin-top: 3rem; } }
 
 .about .hentry {
   margin-bottom: 0; }
@@ -815,6 +800,14 @@ img.logo {
 .quote-submission p {
   margin-bottom: 0; }
 
+.quote-submission .fail-msg {
+  color: yellow;
+  font-family: "Exo-Italic";
+  font-size: 0.9rem; }
+
+.quote-submission span {
+  color: red; }
+
 .quote-submission-wrapper div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -831,12 +824,31 @@ img.logo {
 .quote-submission-wrapper textarea {
   margin: 0.7rem 0; }
 
+/*  General for all Pages */
+@media (min-width: 1080px) {
+  .about .entry-title,
+  .browse-archives .entry-title,
+  .quote-submission .entry-title {
+    padding: 1rem 0; } }
+
+.number-pagination {
+  margin-top: 3rem; }
+  .number-pagination a,
+  .number-pagination span {
+    padding: 0 0.25rem; }
+
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
 /*  Archives/single Page */
 .archive .hentry {
   border-bottom: 1px dashed #ffffff; }
+
+.archive .number-pagination {
+  margin-top: 3rem; }
+  .archive .number-pagination a,
+  .archive .number-pagination span {
+    padding: 0 0.25rem; }
 
 .archive .entry-content p {
   margin-top: 1rem; }
@@ -938,40 +950,36 @@ img.logo {
     margin: 0 auto; } }
 
 /* Quotes */
-.fas {
+i,
+.fas,
+.fa-quote-left {
   display: none; }
-  .fas::before, .fas::after {
+  i::before, i::after,
+  .fas::before,
+  .fas::after,
+  .fa-quote-left::before,
+  .fa-quote-left::after {
     display: none; }
   @media (min-width: 1080px) {
-    .fas {
+    i,
+    .fas,
+    .fa-quote-left {
       color: #00cc00;
       padding-top: 2rem;
       font-size: 125px; }
-      .fas::before, .fas::after {
+      i::before, i::after,
+      .fas::before,
+      .fas::after,
+      .fa-quote-left::before,
+      .fa-quote-left::after {
         display: block; } }
 
-/* Search Page */
-.search-results .page-title {
-  border-bottom: 1px dashed #ffffff;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem; }
-  @media (min-width: 1080px) {
-    .search-results .page-title {
-      padding: 1.5rem 0; } }
-
-.search-results p {
-  margin-bottom: 0; }
-
 /* 404 Page */
-@media (min-width: 1080px) {
-  .error-404,
-  .not-found {
-    width: 650px; } }
-
 .error-404 fieldset,
 .not-found fieldset {
   border: none;
   margin-left: 0;
+  max-height: 200px;
   padding-left: 0; }
 
 .error-404 i,
@@ -980,26 +988,23 @@ img.logo {
 .not-found i,
 .not-found .fa,
 .not-found .fa-search {
-  display: block;
   font-size: 20px; }
-
-@media (min-width: 1080px) {
-  .error-404 .page-title,
-  .not-found .page-title {
-    padding-top: 1.5rem; } }
 
 .error-404 .search-form input[type='search'],
 .not-found .search-form input[type='search'] {
   color: #fff;
   padding-left: 0.75rem;
-  width: 200px; }
+  width: 240px; }
   @media (min-width: 620px) {
     .error-404 .search-form input[type='search'],
     .not-found .search-form input[type='search'] {
-      font-size: 1.25rem;
-      max-width: 250px; } }
+      font-size: 1.25rem; } }
 
 .error-404 .search-submit,
 .not-found .search-submit {
   border: none;
   padding: 0 0.7rem; }
+
+.error404 .site-main {
+  margin-left: 2rem;
+  padding-left: 0; }

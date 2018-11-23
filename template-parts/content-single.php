@@ -7,13 +7,13 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	<header class="entry-header">
-		<!-- <?php if ( has_post_thumbnail() ) : ?>
+		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?> -->
+		<?php endif; ?>
 
-		<?php the_title( '<h1 class="entry-title">&mdash; ', '</h1>' ); ?>
+		<?php the_title( '<h2 class="entry-title">&mdash; ', '</h2>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
