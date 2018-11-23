@@ -16,7 +16,7 @@ Mobile-first, responsive design.
 
 **Tablet**: breakpoint at `620px`
 
-<img src="images/ScreenShot-qod_tablet.png" width="800" height="auto">
+<img src="images/ScreenShot-qod_tablet.png" width="500" height="auto">
 
 **Desktop**: breakpoint at `1080px`
 
