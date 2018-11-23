@@ -1,7 +1,5 @@
 # Project 5: Quotes on Dev
 
-Inhabitent Site is a multi-page website for a Inhabitent Camping Supply Co. Its objective is using WordPress as a content management system.
-
 ## **Technologies Used**
 
 PHP, jQuery, HTML, CSS/SCSS, gulp, CLI, Wordpress CMS
