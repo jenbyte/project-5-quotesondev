@@ -84,12 +84,17 @@
       })
         .done(function(response) {
           console.log('sent!');
-
           // slideUp the form
           // append a success message
+          $('.quote-submission-wrapper').slideUp(700);
+          $('.quote-submission').append(
+            '<p>Thanks, your quote submission was received!</p>'
+          );
         })
         .fail(function() {
           console.log('something went wrong');
+          alert('Please enter required fields.');
+
           //output message for user saying something went wrong
         });
     } // end of postQuote fx

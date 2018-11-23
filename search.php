@@ -8,6 +8,9 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
+
+		<i class="fas fa-quote-left"></i>
+
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -23,7 +26,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php qod_numbered_pagination(); ?>
+		
 
 		<?php else : ?>
 
@@ -32,6 +35,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+
+		<i class="fas fa-quote-right"></i>
+
 	</section><!-- #primary -->
 
 <?php get_footer(); ?>

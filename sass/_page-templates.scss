@@ -7,13 +7,6 @@
     border-bottom: $border-dash;
   }
 
-  .number-pagination {
-    margin-top: 3rem;
-    a,
-    span {
-      padding: 0 0.25rem;
-    }
-  }
   .entry-content {
     p {
       margin-top: 1rem;
@@ -30,8 +23,6 @@
   .source {
     font-style: italic;
   }
-}
-.browse-archives {
 }
 
 /* Main Page */
@@ -103,6 +94,14 @@ i,
   }
 }
 
+/* Search Page */
+.search-results {
+  .page-title {
+    border-bottom: $border-dash;
+    padding: 1.5rem 0;
+  }
+}
+
 /* 404 Page */
 .error-404,
 .not-found {
@@ -116,9 +115,14 @@ i,
   i,
   .fa,
   .fa-search {
+    display: block;
     font-size: 20px;
   }
-
+  p {
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
   .search-form input[type='search'] {
     color: $color__text-main;
     padding-left: 0.75rem;

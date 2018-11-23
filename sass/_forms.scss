@@ -56,6 +56,7 @@ textarea {
   padding: 0.25rem 0.5rem;
 
   &:focus {
+    border: 1px solid white;
     color: #fff;
   }
 }
@@ -71,4 +72,5 @@ input[type='search'] {
 textarea {
   padding-left: 3px;
   width: 95%;
+  min-width: 250px;
 }
