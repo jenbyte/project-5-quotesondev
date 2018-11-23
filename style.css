@@ -660,20 +660,6 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
-/* Quotes */
-i,
-.fas,
-.fa-quote-left {
-  display: none; }
-  @media (min-width: 1080px) {
-    i,
-    .fas,
-    .fa-quote-left {
-      display: block;
-      color: #00cc00;
-      padding-top: 2rem;
-      font-size: 125px; } }
-
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -693,7 +679,8 @@ object {
 
 /* Header section */
 img.logo {
-  width: 300px; }
+  width: 300px;
+  padding-top: 1.5rem; }
   @media (min-width: 620px) {
     img.logo {
       padding-top: 2rem;
@@ -751,7 +738,8 @@ img.logo {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    margin: 1rem 0; }
     @media (min-width: 620px) {
       .site-info p {
         margin-bottom: 1rem;
@@ -950,41 +938,40 @@ img.logo {
     margin: 0 auto; } }
 
 /* Quotes */
-i,
-.fas,
-.fa-quote-left {
+.fas {
   display: none; }
-  i::before, i::after,
-  .fas::before,
-  .fas::after,
-  .fa-quote-left::before,
-  .fa-quote-left::after {
+  .fas::before, .fas::after {
     display: none; }
   @media (min-width: 1080px) {
-    i,
-    .fas,
-    .fa-quote-left {
+    .fas {
       color: #00cc00;
       padding-top: 2rem;
       font-size: 125px; }
-      i::before, i::after,
-      .fas::before,
-      .fas::after,
-      .fa-quote-left::before,
-      .fa-quote-left::after {
+      .fas::before, .fas::after {
         display: block; } }
 
 /* Search Page */
 .search-results .page-title {
   border-bottom: 1px dashed #ffffff;
-  padding: 1.5rem 0; }
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem; }
+  @media (min-width: 1080px) {
+    .search-results .page-title {
+      padding: 1.5rem 0; } }
+
+.search-results p {
+  margin-bottom: 0; }
 
 /* 404 Page */
+@media (min-width: 1080px) {
+  .error-404,
+  .not-found {
+    width: 650px; } }
+
 .error-404 fieldset,
 .not-found fieldset {
   border: none;
   margin-left: 0;
-  max-height: 200px;
   padding-left: 0; }
 
 .error-404 i,
@@ -997,25 +984,22 @@ i,
   font-size: 20px; }
 
 @media (min-width: 1080px) {
-  .error-404 p,
-  .not-found p {
-    margin-bottom: 0; } }
+  .error-404 .page-title,
+  .not-found .page-title {
+    padding-top: 1.5rem; } }
 
 .error-404 .search-form input[type='search'],
 .not-found .search-form input[type='search'] {
   color: #fff;
   padding-left: 0.75rem;
-  width: 240px; }
+  width: 200px; }
   @media (min-width: 620px) {
     .error-404 .search-form input[type='search'],
     .not-found .search-form input[type='search'] {
-      font-size: 1.25rem; } }
+      font-size: 1.25rem;
+      max-width: 250px; } }
 
 .error-404 .search-submit,
 .not-found .search-submit {
   border: none;
   padding: 0 0.7rem; }
-
-.error404 .site-main {
-  margin-left: 2rem;
-  padding-left: 0; }

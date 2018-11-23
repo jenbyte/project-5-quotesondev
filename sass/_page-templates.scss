@@ -75,9 +75,7 @@
 }
 
 /* Quotes */
-i,
-.fas,
-.fa-quote-left {
+.fas {
   display: none;
   &::before,
   &::after {
@@ -98,17 +96,26 @@ i,
 .search-results {
   .page-title {
     border-bottom: $border-dash;
-    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    @include desktop {
+      padding: 1.5rem 0;
+    }
+  }
+  p {
+    margin-bottom: 0;
   }
 }
 
 /* 404 Page */
 .error-404,
 .not-found {
+  @include desktop {
+    width: 650px;
+  }
   fieldset {
     border: none;
     margin-left: 0;
-    max-height: 200px;
     padding-left: 0;
   }
 
@@ -118,28 +125,25 @@ i,
     display: block;
     font-size: 20px;
   }
-  p {
+
+  .page-title {
     @include desktop {
-      margin-bottom: 0;
+      padding-top: 1.5rem;
     }
   }
+
   .search-form input[type='search'] {
     color: $color__text-main;
     padding-left: 0.75rem;
-    width: 240px;
+    width: 200px;
     @include tablet {
       font-size: 1.25rem;
+      max-width: 250px;
     }
   }
 
   .search-submit {
     border: none;
     padding: 0 0.7rem;
-  }
-}
-.error404 {
-  .site-main {
-    margin-left: 2rem;
-    padding-left: 0;
   }
 }

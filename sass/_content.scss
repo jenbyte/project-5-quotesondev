@@ -31,7 +31,6 @@
     justify-content: center;
     margin: 0 auto;
     padding: 0 1rem;
-    // padding-left: 2rem;
   }
 }
 
@@ -63,17 +62,4 @@
 .page-links {
   clear: both;
   margin: 0 0 $base__space-unit;
-}
-
-/* Quotes */
-i,
-.fas,
-.fa-quote-left {
-  display: none;
-  @include desktop {
-    display: block;
-    color: $color__link;
-    padding-top: 2rem;
-    font-size: 125px;
-  }
 }

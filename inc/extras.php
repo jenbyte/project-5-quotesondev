@@ -56,7 +56,7 @@ function qod_modify_archives( $query ){
     }
 
     if( $query->is_search() ) {
-        $query->set('posts_per_page',15);
+        $query->set('posts_per_page',10);
     }
 }
 add_action('pre_get_posts', 'qod_modify_archives' );

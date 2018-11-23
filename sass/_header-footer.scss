@@ -1,6 +1,7 @@
 /* Header section */
 img.logo {
   width: 300px;
+  padding-top: 1.5rem;
 
   @include tablet {
     padding-top: 2rem;
@@ -54,6 +55,7 @@ img.logo {
   p {
     display: flex;
     justify-content: space-between;
+    margin: 1rem 0;
 
     @include tablet {
       margin-bottom: 1rem;
