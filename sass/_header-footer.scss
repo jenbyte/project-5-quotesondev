@@ -47,7 +47,7 @@ img.logo {
 
   @include tablet {
     margin: 3.5rem 0 3rem;
-    width: 650px;
+    width: auto;
   }
 
   @include desktop {
