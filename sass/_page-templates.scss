@@ -22,7 +22,6 @@
 
   .page-title {
     border-bottom: $border-dash;
-    // margin-bottom: 2rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
   }
@@ -114,6 +113,7 @@ i,
   i,
   .fa,
   .fa-search {
+    display: inline-block;
     font-size: 20px;
   }
 
@@ -133,7 +133,8 @@ i,
 }
 .error404 {
   .site-main {
-    margin-left: 2rem;
+    margin: auto;
     padding-left: 0;
+    width: 650px;
   }
 }

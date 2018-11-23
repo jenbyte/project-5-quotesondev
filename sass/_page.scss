@@ -79,8 +79,10 @@
 .about,
 .browse-archives,
 .quote-submission {
-  @include desktop {
-    .entry-title {
+  .entry-title {
+    padding-bottom: 1rem;
+
+    @include desktop {
       padding: 1rem 0;
     }
   }
