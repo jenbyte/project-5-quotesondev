@@ -138,3 +138,18 @@ i,
     }
   }
 }
+
+/* Search */
+.search {
+  .entry-content {
+    p {
+      margin-top: 1rem;
+    }
+  }
+
+  .page-title {
+    border-bottom: $border-dash;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+}

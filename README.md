@@ -6,12 +6,6 @@ Inhabitent Site is a multi-page website for a Inhabitent Camping Supply Co. Its 
 
 PHP, jQuery, HTML, CSS/SCSS, gulp, CLI, Wordpress CMS
 
-## **Personal Learnings**
-
-- How to create a WordPress theme
-- Understanding the WP Template Hierarchy
-- Using PHP to modify content in WordPress
-
 ## **Installation**
 
 "Quotes on Dev" site requires [Node.js v4+][1] to run.
@@ -25,6 +19,12 @@ $ gulp
 ```
 
 [1]: https://nodejs.org/en/
+
+## **Screenshots**
+
+Breakpoints at `1080px` for desktop, and `620px` for tablets.
+
+![Desktop](https://github.com/jenjjy/project5-quotesondev/blob/master/images/Screen%20Shot%20qod_desktop.png)
 
 ## **License**
 

@@ -1001,3 +1001,12 @@ i,
   @media (min-width: 1080px) {
     .error404 .site-main {
       margin: auto; } }
+
+/* Search */
+.search .entry-content p {
+  margin-top: 1rem; }
+
+.search .page-title {
+  border-bottom: 1px dashed #ffffff;
+  padding-top: 1rem;
+  padding-bottom: 2rem; }
