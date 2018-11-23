@@ -10,17 +10,17 @@ PHP, jQuery, HTML, CSS/SCSS, gulp, CLI, Wordpress CMS
 
 Mobile-first, responsive design.
 
-### **Mobile**
+**Mobile**:
 
-<img src="images/ScreenShot-qod_mobile.png" width="800" height="500">
+<img src="images/ScreenShot-qod_mobile.png" width="auto" height="500">
 
-### **Tablet**: breakpoint at `620px`
+**Tablet**: breakpoint at `620px`
 
-<img src="images/ScreenShot-qod_tablet.png" width="800" height="500">
+<img src="images/ScreenShot-qod_tablet.png" width="800" height="auto">
 
-### **Desktop**: breakpoint at `1080px`
+**Desktop**: breakpoint at `1080px`
 
-<img src="images/ScreenShot-qod_desktop.png" width="800" height="500">
+<img src="images/ScreenShot-qod_desktop.png" width="800" height="auto">
 
 ## **Installation**
 
