@@ -6,6 +6,18 @@ Inhabitent Site is a multi-page website for a Inhabitent Camping Supply Co. Its 
 
 PHP, jQuery, HTML, CSS/SCSS, gulp, CLI, Wordpress CMS
 
+## **Screenshots**
+
+Mobile
+![Mobile](https://github.com/jenjjy/project5-quotesondev/blob/master/images/Screen%20Shot%20qod_mobile.png)
+
+Tablet - breakpoint at `620px`
+![Tablet](https://github.com/jenjjy/project5-quotesondev/blob/master/images/Screen%20Shot%20qod_tablet.png)
+
+Desktop - breakpoint at `1080px`
+
+![Desktop](https://github.com/jenjjy/project5-quotesondev/blob/master/images/Screen%20Shot%20qod_desktop.png)
+
 ## **Installation**
 
 "Quotes on Dev" site requires [Node.js v4+][1] to run.
@@ -19,12 +31,6 @@ $ gulp
 ```
 
 [1]: https://nodejs.org/en/
-
-## **Screenshots**
-
-Breakpoints at `1080px` for desktop, and `620px` for tablets.
-
-![Desktop](https://github.com/jenjjy/project5-quotesondev/blob/master/images/Screen%20Shot%20qod_desktop.png)
 
 ## **License**
 
