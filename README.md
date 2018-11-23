@@ -6,17 +6,21 @@ Inhabitent Site is a multi-page website for a Inhabitent Camping Supply Co. Its 
 
 PHP, jQuery, HTML, CSS/SCSS, gulp, CLI, Wordpress CMS
 
-## **Screenshots**
+## **Design**
 
-Mobile
-![Mobile](https://github.com/jenjjy/project5-quotesondev/blob/master/images/Screen%20Shot%20qod_mobile.png)
+Mobile-first, responsive design.
 
-Tablet - breakpoint at `620px`
-![Tablet](https://github.com/jenjjy/project5-quotesondev/blob/master/images/Screen%20Shot%20qod_tablet.png)
+### **Mobile**
 
-Desktop - breakpoint at `1080px`
+<img src="images/ScreenShot-qod_mobile.png" width="800" height="500">
 
-![Desktop](https://github.com/jenjjy/project5-quotesondev/blob/master/images/Screen%20Shot%20qod_desktop.png)
+### **Tablet**: breakpoint at `620px`
+
+<img src="images/ScreenShot-qod_tablet.png" width="800" height="500">
+
+### **Desktop**: breakpoint at `1080px`
+
+<img src="images/ScreenShot-qod_desktop.png" width="800" height="500">
 
 ## **Installation**
 
