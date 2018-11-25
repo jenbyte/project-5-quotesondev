@@ -41,11 +41,12 @@
             $ref.append(` <a href="${link}">${source}</a>`);
           }
 
-          // figure out the post slug
+          // figures out the post slug
           history.pushState(null, null, qod_vars.home_url + '/' + quote.slug);
         })
         .fail(function() {
-          // Append an error message or alert
+          $quote.empty();
+          $quote.append('Sorry there was an error. Please try again.');
           console.log('error');
         });
     } // end of getQuote fx
