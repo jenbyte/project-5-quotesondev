@@ -1,5 +1,5 @@
 (function($) {
-  $(document).ready(function() {
+  $(function() {
     const $quote = $('.entry-content');
     const $author = $('.entry-title');
     const $ref = $('.source');
