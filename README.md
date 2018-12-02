@@ -27,7 +27,7 @@ Mobile-first, responsive design.
 Install the dependencies and devDependencies and start the server.
 
 ```
-$ cd wp-content/themes/inhabitent
+$ cd wp-content/themes/quotes
 $ npm install -d
 $ gulp
 ```
